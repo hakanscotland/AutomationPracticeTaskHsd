@@ -28,7 +28,7 @@ public class addtoCardSteps extends AbstractClass {
         clickFunction(addToCardPage.tShirtButton);
 
 
-        System.out.println("clicked on TShirt Tab");
+        System.out.println("Clicked on TShirt Tab");
     }
 
     @Given("Click the Faded Short Sleeve T-shirts")
@@ -57,14 +57,14 @@ public class addtoCardSteps extends AbstractClass {
     public void click_on_Add_to_cart_button() {
 
         clickFunction(addToCardPage.addToCartButton);
-        System.out.println("click on Add_to_cart_button");
+        System.out.println("Click on Add to Cart button");
 
     }
 
     @Given("Click on Continue shopping button")
     public void click_on_Continue_shopping_button() {
         clickFunction(addToCardPage.ContinueButton);
-        System.out.println("Clicked on Continue_shopping Button");
+        System.out.println("Clicked on Continue Shopping Button");
 
     }
 
@@ -109,7 +109,7 @@ public class addtoCardSteps extends AbstractClass {
     @Given("Click on Printed Summer Dress")
     public void click_on_Printed_Summer_Dress() {
         clickFunction(addToCardPage.PrintedSummerDress);
-        System.out.println("Click on Printed_Summer_Dress");
+        System.out.println("Click on Printed Summer Dress");
     }
 
     @Given("Navigate over the Printed Summer Dress Size click M")
@@ -124,7 +124,7 @@ public class addtoCardSteps extends AbstractClass {
 
         clickFunction(addToCardPage.PrintedSummerDressColor);
 
-        System.out.println("Chose Color asa Orange");
+        System.out.println("Chose Color as an Orange");
     }
 
     @Given("click to Proceed to checkout")
@@ -185,7 +185,7 @@ public class addtoCardSteps extends AbstractClass {
     @Then("the cart total is should {string}")
     public void the_cart_total_is_should(String string) {
 
-        String expectedCartTotal = "$64.00";
+        String expectedCartTotal = "$65.53";
         String actualCardTotal = addToCardPage.CartTotal.getText();
 
         Assertion(actualCardTotal,expectedCartTotal);

@@ -1,6 +1,6 @@
 Feature: Add to the cart
 
-  @SmokeTest
+  @smoke_test
   Scenario: Add to cart and remove
 
 

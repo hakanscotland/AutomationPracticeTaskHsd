@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		//tags = "@tag1",
+		tags = "@smoke_test",
         features = "src/test/resources/features",
         glue = "Step_Definitions",
         dryRun = false,
