@@ -11,7 +11,8 @@ import io.cucumber.junit.CucumberOptions;
 		//tags = "@tag1",
         features = "src/test/resources/features",
         glue = "Step_Definitions",
-        dryRun = false
+        dryRun = false,
+        plugin = "json:target/cucumber.json"
 
 )
 public class CukesRunner {
