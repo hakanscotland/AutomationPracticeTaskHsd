@@ -164,7 +164,7 @@ public class addtoCardSteps extends AbstractClass {
 
         Assertion(actualTotal1,expectedTotal1);
 
-        //System.out.println("Expexted Line 1 Total: " + expectedTotal1);
+        //System.out.println("Expected Line 1 Total: " + expectedTotal1);
         //System.out.println("Actual Line 1 Total: " + actualTotal1);
         //Assert.assertEquals(expectedTotal1, actualTotal1);
     }
@@ -192,8 +192,7 @@ public class addtoCardSteps extends AbstractClass {
 
         // System.out.println("Expected Line 1 Total: " + expectedCartTotal);
         //System.out.println("Actual Line 1 Total: " + actualCardTotal);
-        //Assert.assertEquals(expextedCartTotal, actualCardTotal);
-
+        //Assert.assertEquals(expectedCartTotal, actualCardTotal);
 
 
         }
