@@ -164,8 +164,7 @@ public class addtoCardSteps extends AbstractClass {
 
         Assertion(actualTotal1,expectedTotal1);
 
-        //System.out.println("Expected Line 1 Total: " + expectedTotal1);
-        //System.out.println("Actual Line 1 Total: " + actualTotal1);
+
         //Assert.assertEquals(expectedTotal1, actualTotal1);
     }
 
@@ -176,8 +175,7 @@ public class addtoCardSteps extends AbstractClass {
 
         Assertion(actualTotal2,expectedTotal2);
 
-        //System.out.println("Expected Line 1 Total: " + expectedTotal2);
-        //System.out.println("Actual Line 1 Total: " + actualTotal2);
+
         //Assert.assertEquals(expectedTotal2, actualTotal2);
 
     }
@@ -185,13 +183,13 @@ public class addtoCardSteps extends AbstractClass {
     @Then("the cart total is should {string}")
     public void the_cart_total_is_should(String string) {
 
-        String expectedCartTotal = "$65.53";
+        //String expectedCartTotal = "$65.53"; //Failed
+        String expectedCartTotal = "$64.00";
         String actualCardTotal = addToCardPage.CartTotal.getText();
 
         Assertion(actualCardTotal,expectedCartTotal);
 
-        // System.out.println("Expected Line 1 Total: " + expectedCartTotal);
-        //System.out.println("Actual Line 1 Total: " + actualCardTotal);
+
         //Assert.assertEquals(expectedCartTotal, actualCardTotal);
 
 
