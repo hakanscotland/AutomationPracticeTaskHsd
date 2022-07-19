@@ -5,29 +5,20 @@ Feature: Add to the cart
 
 
     Given Go to the test website
-    And Click on T-Shirt Tab
-    And Click the Faded Short Sleeve T-shirts
-    And Navigate over the Size click M
-    And Chose Color as a Blue
-    And Click on Add to cart button
-    And Click on Continue shopping button
-    And Click on Dresses Tab
-    And Click on Evening Dresses Tab
-    And Click on Printed Dress
-    And Navigate over the Printed Dress Size click S
-    And Chose Color as a Beige
-    And Click on Add to cart button
-    And Click on Continue shopping button
-    And Click on Dresses Tab
-    And Click on Printed Summer Dress
-    And Navigate over the Printed Summer Dress Size click M
-    And Chose Color as a Orange
+    And Click on Fragrance Tab
+    And Click Men Categories Tab
+    And Click Armani Code Sport Product
+    And Add Quantity
     And Click on Add to cart button
     And click to Proceed to checkout
-    And click to remove button to the Evening Dress from the cart
-    And Click on add button for second Faded Short Sleeve T Shirt
-    When Click to View Cart
-    Then the cart first line total is should '$28.98'
-    Then the cart second line total is should '$33.02'
-    Then the cart total is should '$64.00'
+    And select check box as  Guest Checkout
+    And Click Continue Button
+    And Fill the (GUEST CHECKOUT STEP1 form)
+    When Click Continue Button for CHECKOUT CONFIRMATION
+    Then the cart Sub-Total should	'$75.00'
+    Then the cart Flat Shipping Rate should	'$2.00'
+    Then the cart total is should '$77.00'
+    When Click Confirm Order Button
+    Then The text message should appear 'YOUR ORDER HAS BEEN PROCESSED!'
+
 

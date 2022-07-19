@@ -28,7 +28,6 @@ public  abstract class AbstractClass {
 
     public void selectElementFromDropdown(WebElement dropdown,String element){
         Select slc = new Select(dropdown);
-       // slc.selectByVisibleText(element);
         slc.selectByValue(element);
     }
 

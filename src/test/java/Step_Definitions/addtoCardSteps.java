@@ -13,7 +13,6 @@ public class addtoCardSteps extends AbstractClass {
     addToCardPage addToCardPage = new addToCardPage();
 
     @Given("Go to the test website")
-
     public void go_to_the_test_website() {
         System.out.println("Opening Shopping Page");
         String url = ConfigurationReader.getProperty("url");
@@ -21,179 +20,157 @@ public class addtoCardSteps extends AbstractClass {
 
     }
 
-    @Given("Click on T-Shirt Tab")
-    public void click_on_T_Shirt_Tab() throws InterruptedException {
+    @Given("Click on Fragrance Tab")
+    public void click_on_Fragrance_Tab() {
 
-        Thread.sleep(2000);
-        clickFunction(addToCardPage.tShirtButton);
+        clickFunction(addToCardPage.FragranceButton);
 
-
-        System.out.println("Clicked on TShirt Tab");
+        System.out.println("Clicked on Fragrance Tab");
     }
 
-    @Given("Click the Faded Short Sleeve T-shirts")
-    public void click_the_Faded_Short_Sleeve_T_shirts() {
-        clickFunction(addToCardPage.Faded_Short_Sleeve);
+    @Given("Click Men Categories Tab")
+    public void click_Men_Categories_Tab() {
+        clickFunction(addToCardPage.MenCategoryButton);
 
-        System.out.println("Clicked on the Faded Short Sleeve TShirts");
+        System.out.println("Clicked on Men Category Tab");
     }
 
-    @Given("Navigate over the Size click M")
-    public void navigate_over_the_Size_click_M() {
+    @Given("Click Armani Code Sport Product")
+    public void click_Armani_Code_Sport_Product() {
 
-        selectElementFromDropdown(addToCardPage.SelectSize, "2");
+        clickFunction(addToCardPage.ArmaniCodeSport);
+        System.out.println("Clicked on ArmaniCode Sport Product");
 
-        System.out.println("Navigate over the Size and clicked to M");
     }
 
-    @Given("Chose Color as a Blue")
-    public void chose_Color_as_a_Blue() {
+    @Given("Add Quantity")
+    public void add_Quantity() throws InterruptedException {
+        addToCardPage.InputQuantity.clear();
+        sendKeysFunction(addToCardPage.InputQuantity, "2");
 
-        clickFunction(addToCardPage.FadedTshirtColor);
-        System.out.println("Clicked Color as a Blue");
+       System.out.println("Quantity Added");
+        Thread.sleep(6000);
+
     }
+
 
     @Given("Click on Add to cart button")
     public void click_on_Add_to_cart_button() {
-
         clickFunction(addToCardPage.addToCartButton);
-        System.out.println("Click on Add to Cart button");
+        System.out.println("Clicked on Add to Cart button");
 
-    }
-
-    @Given("Click on Continue shopping button")
-    public void click_on_Continue_shopping_button() {
-        clickFunction(addToCardPage.ContinueButton);
-        System.out.println("Clicked on Continue Shopping Button");
-
-    }
-
-    @Given("Click on Dresses Tab")
-    public void click_on_Dresses_Tab() {
-
-        clickFunction(addToCardPage.DressesTab);
-        System.out.println("Clicked on Dresses_Tab");
-    }
-
-    @Given("Click on Evening Dresses Tab")
-    public void click_on_Evening_Dresses_Tab() {
-        clickFunction(addToCardPage.EveningDressesTab);
-        System.out.println("Clicked on Evening_Dresses_Tab");
-    }
-
-    @Given("Click on Printed Dress")
-    public void click_on_Printed_Dress() {
-        clickFunction(addToCardPage.EveningPrintedDresses);
-        System.out.println("Clicked on Printed_Dress");
-    }
-
-    @Given("Navigate over the Printed Dress Size click S")
-    public void navigate_over_the_Printed_Dress_Size_click_S() {
-
-        //Switch Frame
-        // Driver.getDriver().switchTo().frame("fancybox-frame1654956477555");
-        //  selectElementFromDropdown(addToCardPage.SelectSizeEveningDress, "1");
-
-        selectElementFromDropdown(addToCardPage.SelectSize, "1");
-
-        System.out.println("Navigate over the Printed Dress Size click S");
-        // Driver.getDriver().switchTo().defaultContent();
-    }
-
-    @Given("Chose Color as a Beige")
-    public void chose_Color_as_a_Beige() {
-        clickFunction(addToCardPage.PrintedTshirtColor);
-        System.out.println("Chose Color as a Beige");
-    }
-
-    @Given("Click on Printed Summer Dress")
-    public void click_on_Printed_Summer_Dress() {
-        clickFunction(addToCardPage.PrintedSummerDress);
-        System.out.println("Click on Printed Summer Dress");
-    }
-
-    @Given("Navigate over the Printed Summer Dress Size click M")
-    public void navigate_over_the_Printed_Summer_Dress_Size_click_M() {
-
-        selectElementFromDropdown(addToCardPage.SelectSize, "2");
-        System.out.println("Navigate over the Printed Summer Dress Size click M");
-    }
-
-    @Given("Chose Color as a Orange")
-    public void chose_Color_as_a_Orange() {
-
-        clickFunction(addToCardPage.PrintedSummerDressColor);
-
-        System.out.println("Chose Color as an Orange");
     }
 
     @Given("click to Proceed to checkout")
     public void click_to_Proceed_to_checkout() {
-        clickFunction(addToCardPage.ProceedToCheckoutButton);
-
-        System.out.println("Click to Proceed to checkout");
+        clickFunction(addToCardPage.CheckOutButton);
+        System.out.println("Clicked on CheckOut button");
     }
 
-    @Given("click to remove button to the Evening Dress from the cart")
-    public void click_to_remove_button_to_the_Evening_Dress_from_the_cart() {
-        clickFunction(addToCardPage.RemoveButtonEveningDress);
+    @Given("select check box as  Guest Checkout")
+    public void select_check_box_as_Guest_Checkout() {
+        clickFunction(addToCardPage.SelectGuestAccount);
+//        String expectedGuest = "checked";
+//        String actualGuest = addToCardPage.SelectGuestAccount.getText();
+//
+//        System.out.println("Expexted: "+ expectedGuest);
+//        System.out.println("Actual: " + actualGuest);
+//        Assertion(expectedGuest,actualGuest);
+        System.out.println("Select check box as Guest Checkout");
 
-        System.out.println("Click to remove_button for Evening Dress");
+    }
+
+    @Given("Click Continue Button")
+    public void click_Continue_Button() {
+        clickFunction(addToCardPage.ContinueButton);
+        System.out.println("Clicked on Continue button");
+    }
+
+    @Given("Fill the \\(GUEST CHECKOUT STEP1 form)")
+    public void fill_the_GUEST_CHECKOUT_STEP1_form() {
+        sendKeysFunction(addToCardPage.FirstName, "John");
+        sendKeysFunction(addToCardPage.LastName, "Doe");
+        sendKeysFunction(addToCardPage.EMail, "siparis@msn.com");
+        sendKeysFunction(addToCardPage.Telephone, "07459900232");
+        sendKeysFunction(addToCardPage.Fax, " ");
+
+        sendKeysFunction(addToCardPage.Company, " ");
+        sendKeysFunction(addToCardPage.Address1, "Berkeley");
+        sendKeysFunction(addToCardPage.Address2, "3/2");
+        sendKeysFunction(addToCardPage.City, "Glasgow");
+
+        selectElementFromDropdown(addToCardPage.RegionState, "3551");
+
+        sendKeysFunction(addToCardPage.Postcode, "G333JR");
+
+        System.out.println("Filled out Guest Form Fields");
     }
 
 
-    @Given("Click on add button for second Faded Short Sleeve T Shirt")
-    public void click_on_add_button_for_second_Faded_Short_Sleeve_T_Shirt() {
-        clickFunction(addToCardPage.AddButtonFadedShortSleeve);
+    @When("Click Continue Button for CHECKOUT CONFIRMATION")
+    public void click_Continue_Button_for_CHECKOUT_CONFIRMATION() {
+        clickFunction(addToCardPage.ContinueButton);
+        System.out.println("Clicked on Continue button");
 
-        System.out.println("Click on add button for second Faded Short Sleeve T Shirt");
+
     }
 
-    @When("Click to View Cart")
-    public void click_to_View_Cart() throws InterruptedException {
-        clickFunction(addToCardPage.ViewCart);
-        System.out.println("Click on view cart");
-        Thread.sleep(2000);
+
+
+    @Then("the cart Sub-Total should	{string}")
+    public void the_cart_Sub_Total_should(String string) {
+
+        String expectedSubtotal = string;
+        String actualSubtotal = addToCardPage.SubTotal.getText();
+
+        System.out.println("Expected Subtotal: " + expectedSubtotal);
+        System.out.println("Actual Subtotal: " + actualSubtotal);
+       Assertion(expectedSubtotal,actualSubtotal);
+
+
     }
 
-    @Then("the cart first line total is should {string}")
-    public void the_cart_first_line_total_is_should(String string) {
-        String expectedTotal1 = "$28.98";
-        String actualTotal1 = addToCardPage.CartFistLineTotal.getText();
+    @Then("the cart Flat Shipping Rate should	{string}")
+    public void the_cart_Flat_Shipping_Rate_should(String string) {
 
+        String expectedFlatShippingRate = string;
+        String actualFlatShippingRate = addToCardPage.FlatShippingRate.getText();
 
-        Assertion(actualTotal1,expectedTotal1);
-
-
-        //Assert.assertEquals(expectedTotal1, actualTotal1);
-    }
-
-    @Then("the cart second line total is should {string}")
-    public void the_cart_second_line_total_is_should(String string) {
-        String expectedTotal2 = "$33.02";
-        String actualTotal2 = addToCardPage.CartSecondTotal.getText();
-
-        Assertion(actualTotal2,expectedTotal2);
-
-
-        //Assert.assertEquals(expectedTotal2, actualTotal2);
+        System.out.println("Expexted FlatShippingRate: " + expectedFlatShippingRate);
+        System.out.println("Actual FlatShippingRate: " + actualFlatShippingRate);
+        Assertion(expectedFlatShippingRate,actualFlatShippingRate);
 
     }
 
     @Then("the cart total is should {string}")
     public void the_cart_total_is_should(String string) {
 
-        //String expectedCartTotal = "$65.53"; //Failed
-        String expectedCartTotal = "$64.00";
-        String actualCardTotal = addToCardPage.CartTotal.getText();
+        String expectedCartTotal = string;
+        String actualCartTotal = addToCardPage.CartTotal.getText();
 
-        Assertion(actualCardTotal,expectedCartTotal);
+        System.out.println("Expected CartTotal: " + expectedCartTotal);
+        System.out.println("Actual CartTotal: " + actualCartTotal);
+        Assertion(expectedCartTotal,actualCartTotal);
+    }
 
+    @When("Click Confirm Order Button")
+    public void click_Confirm_Order_Button() {
+        clickFunction(addToCardPage.ConfirmOrderButton);
+        System.out.println("Clicked on Confirm Order button");
+    }
 
-        //Assert.assertEquals(expectedCartTotal, actualCardTotal);
+    @Then("The text message should appear {string}")
+    public void the_text_message_should_appear(String string) {
 
+        String expectedTextMessage = string;
+        String actualTextMessage = addToCardPage.TextMessage.getText();
 
-        }
+        System.out.println("Expected TextMessage: " + expectedTextMessage);
+        System.out.println("Actual TextMessage: " + actualTextMessage);
+        Assertion(expectedTextMessage,actualTextMessage);
+
+    }
+
 
 
 

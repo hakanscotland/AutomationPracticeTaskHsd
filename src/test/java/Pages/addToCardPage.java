@@ -12,65 +12,71 @@ public class addToCardPage{
 
     }
 
-    @FindBy(xpath="//*[@id='block_top_menu']/ul/li[3]/a")
-    public WebElement tShirtButton;
+    @FindBy(xpath="//section[@id='categorymenu']/nav[@class='subnav']//a[@href='https://automationteststore.com/index.php?rt=product/category&path=49']")
+    public WebElement FragranceButton;
 
-    @FindBy(xpath="//*[@id='center_column']/ul/li")
-    public WebElement Faded_Short_Sleeve;
+    @FindBy(xpath="/html//div[@id='maincontainer']//div[@class='contentpanel']/ul/li[1]/div/a[@href='https://automationteststore.com/index.php?rt=product/category&path=49_51']")
+    public WebElement MenCategoryButton;
 
-    @FindBy(id="group_1")
-    public static WebElement SelectSize;
+    @FindBy(css="a[title='Armani Code Sport']")
+    public static WebElement ArmaniCodeSport;
 
-    @FindBy(name = "Blue")
-    public WebElement FadedTshirtColor;
+    @FindBy(css ="input#product_quantity")
+    public WebElement InputQuantity;
 
-    @FindBy(name = "Submit")
+    @FindBy(css = ".cart")
     public WebElement addToCartButton;
 
-   @FindBy(xpath=" //*[@id='layer_cart']/div[1]/div[2]/div[4]/span")
+   @FindBy(css="#cart_checkout1")
+    public WebElement CheckOutButton;
+
+    @FindBy(css="#accountFrm_accountguest")
+    public WebElement SelectGuestAccount;
+
+    @FindBy(css="button[title='Continue']")
     public WebElement ContinueButton;
 
-    @FindBy(xpath="//*[@id='block_top_menu']/ul/li[2]/a")
-    public WebElement DressesTab;
+    @FindBy(id="guestFrm_firstname")
+    public static WebElement FirstName;
+    @FindBy(id="guestFrm_lastname")
+    public static WebElement LastName;
+    @FindBy(id="guestFrm_email")
+    public static WebElement EMail;
+    @FindBy(id="guestFrm_telephone")
+    public static WebElement Telephone;
+    @FindBy(id="guestFrm_fax")
+    public static WebElement Fax;
+    @FindBy(id="guestFrm_company")
+    public static WebElement Company;
+    @FindBy(id="guestFrm_address_1")
+    public static WebElement Address1;
+    @FindBy(id="guestFrm_address_2")
+    public static WebElement Address2;
+    @FindBy(id="guestFrm_city")
+    public static WebElement City;
 
-    @FindBy(xpath="//*[@id='subcategories']/ul/li[2]/div[1]/a")
-    public WebElement EveningDressesTab;
+    @FindBy(id="guestFrm_zone_id")
+    public static WebElement RegionState;
 
-    @FindBy(id="group_1")
-    public static WebElement SelectSizeEveningDress;
+    @FindBy(id="guestFrm_postcode")
+    public static WebElement Postcode;
 
-    @FindBy(xpath = " //*[@id='center_column']/ul/li")
-    public WebElement EveningPrintedDresses;
+    @FindBy(css = "tr:nth-of-type(1) > td:nth-of-type(2) > .bold")
+    public WebElement SubTotal;
 
-    @FindBy(name = "Beige")
-    public WebElement PrintedTshirtColor;
+    @FindBy(css = "tr:nth-of-type(2) td:nth-of-type(2) .bold")
+    public WebElement FlatShippingRate;
 
-    @FindBy(xpath="//*[@id='center_column']/ul/li[3]/div/div[1]/div/a[1]")
-    public WebElement PrintedSummerDress;
-
-    @FindBy(name = "Orange")
-    public WebElement PrintedSummerDressColor;
-
-    @FindBy(xpath = "//*[@id=\'layer_cart\']/div[1]/div[2]/div[4]/a/span")
-    public WebElement ProceedToCheckoutButton;
-
-    @FindBy(id="4_16_0_0")
-    public WebElement RemoveButtonEveningDress;
-
-    @FindBy(xpath="//*[@id='cart_quantity_up_1_4_0_0']/span/i")
-    public WebElement AddButtonFadedShortSleeve;
-
-    @FindBy(xpath = "//*[@id='header']/div[3]/div/div/div[3]/div/a")
-    public WebElement ViewCart;
-
-    @FindBy(xpath="//*[@id='product_5_25_0_0']/td[6]")
-    public WebElement CartFistLineTotal;
-
-    @FindBy(xpath="/html/body/div/div[2]/div/div[3]/div/div[2]/table/tbody/tr[2]/td[6]")
-    public WebElement CartSecondTotal;
-
-    @FindBy(xpath="//*[@id='total_price']")
+    @FindBy(css="td:nth-of-type(2) .totalamout")
     public WebElement CartTotal;
+
+    @FindBy(id="checkout_btn")
+    public WebElement ConfirmOrderButton;
+
+    @FindBy(css="body.checkout-success:nth-child(2) div.container-fixed:nth-child(1) div.container-fluid div.col-md-12.col-xs-12.mt20 div:nth-child(1) h1.heading1 > span.maintext")
+    public WebElement TextMessage;
+
+
 
 
 }
